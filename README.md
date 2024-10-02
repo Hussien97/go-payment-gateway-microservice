@@ -41,9 +41,24 @@ This project implements a payment gateway microservice that supports deposit and
 2. Run `docker-compose up --build` to start all services.
 3. For running tests only, use `docker-compose up --build test` to log test results (it will take 10 seconds to run the tests as it will wait for kafka, redis, db to run first).
 
+## Mock Services
+
+The Payment Gateway Microservice includes mock services (Gateway A and Gateway B) that simulate external gateways consuming messages from Kafka. These services can be used for testing and development purposes.
+
+### How to Use the Mock Services
+
+1. **Run Mock Services:**
+   The mock services can be started alongside the main application using Docker Compose. They will listen for messages on their respective Kafka topics (`transactions.json` for Gateway A and `transactions.soap` for Gateway B).
+
+2. **Access Mock Services:**
+   - Gateway A: `http://localhost:8081`
+   - Gateway B: `http://localhost:8082`
+
+These services will log incoming messages and process them by calling the callback endpoint of the Payment Gateway Microservice to update the transaction status.
+
 ## Documentation Links
 - [Technical Documentation](https://drive.google.com/file/d/1tUuOjMrFeTRT5lhQ62b3KWtuNuwYpj1t/view?usp=sharing)
-- [API Documentation](https://app.swaggerhub.com/apis/HUSSIENCIS/Payment-Gateway-Microservice/1.0.0)
+- [API Documentation](https://app.swaggerhub.com/apis-docs/HUSSIENCIS/Payment-Gateway-Microservice/1.0.0#)
 - [Repository](https://github.com/Hussien97/go-payment-gateway-microservice)
 
 ### Conclusion

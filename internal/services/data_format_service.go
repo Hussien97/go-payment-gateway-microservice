@@ -12,6 +12,7 @@ import (
 var supportedContentTypes = map[string]bool{
 	"application/json": true,
 	"text/xml":         true,
+	"application/xml":  true,
 }
 
 // checks if the content type is supported
@@ -30,6 +31,8 @@ func DecodeRequest(r *http.Request, request *models.TransactionRequest) error {
 	case "application/json":
 		return json.NewDecoder(r.Body).Decode(request)
 	case "text/xml":
+		return xml.NewDecoder(r.Body).Decode(request)
+	case "application/xml":
 		return xml.NewDecoder(r.Body).Decode(request)
 	default:
 		return fmt.Errorf("unsupported content type")

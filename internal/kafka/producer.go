@@ -36,6 +36,8 @@ func GetTopic(dataFormat string) (string, error) {
 		return "transactions.json", nil
 	case "text/xml":
 		return "transactions.soap", nil
+	case "application/xml":
+		return "transactions.soap", nil
 	default:
 		return "", fmt.Errorf("unsupported data format: %s", dataFormat)
 	}
