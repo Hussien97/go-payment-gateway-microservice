@@ -58,7 +58,7 @@ These services will log incoming messages and process them by calling the callba
 
 ## Documentation Links
 - [Technical Documentation](https://drive.google.com/file/d/1tUuOjMrFeTRT5lhQ62b3KWtuNuwYpj1t/view?usp=sharing)
-- [API Documentation](https://app.swaggerhub.com/apis-docs/HUSSIENCIS/Payment-Gateway-Microservice/1.0.0#)
+- [API Documentation](https://app.swaggerhub.com/apis-docs/hussienmahmoud/Payment-Gateway-Microservice/1.0.0#/)
 - [Repository](https://github.com/Hussien97/go-payment-gateway-microservice)
 
 ### Conclusion
